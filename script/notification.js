@@ -40,7 +40,7 @@ document.getElementById("sendNthree").addEventListener("click", function() {
 
     let currentTime = new Date().toLocaleTimeString();
     let newNotification = document.createElement("p");
-    notificationText.innerText = "You have completed the task Add new reaction &#x1F932; at " + currentTime;
+    notificationText.innerText = "You have completed the task Add new reaction 🤲; at " + currentTime;
 
     notificationText.classList.add("active"); 
     document.getElementById("sendNthree").setAttribute("disabled", "true");
