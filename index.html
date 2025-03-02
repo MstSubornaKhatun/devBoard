@@ -10,6 +10,100 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style -->
+     <style>
+      /* .action-btn:active{
+        background-color: red;
+      } */
+
+      /* hr */
+      .dashed-line {
+            border: none;
+            border-top: 2px dashed rgb(185, 174, 174); 
+            width: 98%; 
+            margin: 20px auto; 
+        }
+
+        /* notification */
+        /* oneN */
+        #nText {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0px 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            transition: background-color ease-in-out;
+        }
+        
+        .active {
+            background-color: #F4F7FF !important;
+        }
+        /* twoN */
+        #nTextTwo {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0px 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            transition: background-color ease-in-out;
+        }
+        
+        .active {
+            background-color: #F4F7FF !important;
+        }
+        /* threeN */
+        #nTextThree {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0px 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            transition: background-color ease-in-out;
+        }
+        
+        .active {
+            background-color: #F4F7FF !important;
+        }
+        /* fourN */
+        #nTextFour {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0px 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            transition: background-color ease-in-out;
+        }
+        
+        .active {
+            background-color: #F4F7FF !important;
+        }
+        /* fiveN */
+        #nTextFive {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0px 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            transition: background-color ease-in-out;
+        }
+        
+        .active {
+            background-color: #F4F7FF !important;
+        }
+        /* sixN */
+        #nTextSix {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0px 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            transition: background-color ease-in-out;
+        }
+        
+        .active {
+            background-color: #F4F7FF !important;
+        }
+     </style>
 
 </head>
 <body class="bg-[#F4F7FF]">
@@ -26,7 +120,7 @@
                     <div class="relative">
                       <div class="bg-[#F4F7FF] w-24 h-12 rounded-full absolute -top-7 right-2">
                           <input type="checkbox" checked="checked" class="checkbox top-2 left-4 checkbox-primary" />
-                          <h4 class="text-2xl absolute left-12 top-2">23</h4>
+                          <h4 id="numberDisplayNavbar" class="text-2xl absolute left-12 top-2">23</h4>
                       </div>
                   </div>
                   </div>
@@ -51,15 +145,17 @@
                         <div>
                             <div>
                                 <p>Task Assigned</p>
-                                <h4 class="font-bold text-start">6</h4>
+                                <h4 id="numberDisplay" class="font-bold text-start">6</h4>
                             </div>
                         </div>
                     </div>
                     <!-- Discover Something New Today! -->
-                    <div class="bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] rounded-xl p-3 flex w-[480px]">
+                    <div id="link-blogs" class="bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] rounded-xl p-3 flex w-[480px] cursor-pointer">
                         <img src="./assets/board.png" alt="">
                         <h2 class="text-xl text-white mt-5">Discover Something New Today!</h2>
                     </div>
+                    
+                    
                     <!-- Calender -->
                     <div class="bg-[#F4F7FF] w-xs flex justify-center text-center items-center gap-3 rounded-md w-md">
                         <div class="relative">
@@ -74,6 +170,7 @@
                         
                     </div>
                 </div>
+                <hr class="dashed-line">
                 <!-- Cards -->
                  <section class="mt-3 grid grid-cols-3 space-y-5 place-items-center">
                     <!-- cards one -->
@@ -91,7 +188,7 @@
                                 <p>Deadline</p>
                                 <h3>21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary mt-1">Completed</button>
+                            <button onclick="this.style.backgroundColor='rgba(55, 82, 253, 0.45)'; this.style.color='white'; this.style.border='none'; alert('Board updated Successfully');" class="btn btn-primary mt-1 action-btn" id="sendN"> Completed </button>
                           </div>
                         </div>
                       </div>
@@ -110,7 +207,7 @@
                                 <p>Deadline</p>
                                 <h3>25 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary mt-1">Completed</button>
+                            <button onclick="this.style.backgroundColor='rgba(55, 82, 253, 0.45)'; this.style.color='white'; this.style.border='none'; alert('Board updated Successfully');" class="btn btn-primary mt-1 action-btn" id="sendNtwo">Completed</button>
                           </div>
                         </div>
                       </div>
@@ -129,7 +226,7 @@
                                 <p>Deadline</p>
                                 <h3>31 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary mt-1">Completed</button>
+                            <button onclick="this.style.backgroundColor='rgba(55, 82, 253, 0.45)'; this.style.color='white'; this.style.border='none'; alert('Board updated Successfully');" class="btn btn-primary mt-1 action-btn" id="sendNthree">Completed</button>
                           </div>
                         </div>
                       </div>
@@ -148,7 +245,7 @@
                                 <p>Deadline</p>
                                 <h3>21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary mt-1">Completed</button>
+                            <button onclick="this.style.backgroundColor='rgba(55, 82, 253, 0.45)'; this.style.color='white'; this.style.border='none'; alert('Board updated Successfully');" class="btn btn-primary mt-1 action-btn" id="sendNfour">Completed</button>
                           </div>
                         </div>
                       </div>
@@ -167,7 +264,7 @@
                                 <p>Deadline</p>
                                 <h3>01 April 2025</h3>
                             </div>
-                            <button class="btn btn-primary mt-1">Completed</button>
+                            <button onclick="this.style.backgroundColor='rgba(55, 82, 253, 0.45)'; this.style.color='white'; this.style.border='none'; alert('Board updated Successfully');" class="btn btn-primary mt-1 action-btn" id="sendNfive">Completed</button>
                           </div>
                         </div>
                       </div>
@@ -186,15 +283,10 @@
                                 <p>Deadline</p>
                                 <h3>05 May 2025</h3>
                             </div>
-                            <button class="btn btn-primary mt-1">Completed</button>
+                            <button onclick="this.style.backgroundColor='rgba(55, 82, 253, 0.45)'; this.style.color='white'; this.style.border='none'; alert('Board updated Successfully');" class="btn btn-primary mt-1 action-btn" id="sendNsix">Completed</button>
                           </div>
                         </div>
                       </div>
-
-
-
-
-
                  </section>
             </div>
 
@@ -205,15 +297,20 @@
                 <h3>Activity Log</h3>
               </div>
               <div class="flex justify-center">
-                <button class="btn btn-primary">Clear History</button>
+                <button id="clearN" class="btn btn-primary">Clear History</button>
               </div>
-              <hr class="mt-2 ">
+              <hr class="dashed-line">
+              <!-- notification -->
+              <p id="nText"></p>
+              <p id="nTextTwo"></p>
+              <p id="nTextThree"></p>
+              <p id="nTextFour"></p>
+              <p id="nTextFive"></p>
+              <p id="nTextSix"></p>
+              
+              
 
 
-                
-
-
-                <!-- <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laborum veritatis velit nostrum ratione aperiam tempora excepturi, iusto modi earum at quae, consequatur minus repellat nemo repellendus, adipisci sit! Voluptatum.</h1> -->
              </section>
         </section>
 
@@ -221,6 +318,12 @@
     </section>
     <!-- date -->
      <script src="./script/date.js"></script>
+     <!-- count -->
+      <script src="./script/count.js"></script>
+      <!-- blogs -->
+       <script src="./script/blogs.js"></script>
+      <!-- notification -->
+       <script src="./script/notification.js"></script>
     
 </body>
 </html>
